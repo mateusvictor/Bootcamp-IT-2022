@@ -1,5 +1,5 @@
-# Bootcamp-IT-2022-Mateus
-Exercícios individuais do Bootcamp IT 2022 - Mercado Livre
+# Bootcamp-IT-2022
+Exercícios do Bootcamp IT 2022 - Mercado Livre
 
 ## Atividades (Práticas Integradoras)
 
