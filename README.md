@@ -10,3 +10,7 @@ Exercícios do Bootcamp IT 2022 - Mercado Livre
 ### 2. Corrida na Selva
 - Código fonte: https://github.com/mateusvictor/Bootcamp-IT-2022-Mateus/blob/main/Java-I/src/jungle.run/JungleRun.java
 - Conceitos: estruturas dinâmicas (coleções, mapas e dicionários).
+
+### 3. POO I - Exercícios
+- Código fonte: https://github.com/mateusvictor/Bootcamp-IT-2022-Mateus/blob/main/Java-II/src/oop1/Person.java
+- Conceitos: programação orientada a objetos.
