@@ -1,4 +1,4 @@
-package lambdas.and.streams;
+package lambda.streams;
 
 public class Employee {
     private String name;
