@@ -1,25 +1,24 @@
-package supermarket;
+package supermarket.models;
 
 import java.math.BigDecimal;
 
-public class Item {
-    private String code;
+public class Product {
+    private Integer code;
     private String name;
-    private String quantity;
+    private Integer quantity;
     private BigDecimal unitPrice;
 
-    public Item(String code, String name, String quantity, BigDecimal unitPrice) {
-        this.code = code;
+    public Product(String name, Integer quantity, BigDecimal unitPrice) {
         this.name = name;
         this.quantity = quantity;
         this.unitPrice = unitPrice;
     }
 
-    public String getCode() {
+    public Integer getCode() {
         return code;
     }
 
-    public void setCode(String code) {
+    public void setCode(Integer code) {
         this.code = code;
     }
 
@@ -31,11 +30,11 @@ public class Item {
         this.name = name;
     }
 
-    public String getQuantity() {
+    public Integer getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(String quantity) {
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 
@@ -45,5 +44,15 @@ public class Item {
 
     public void setUnitPrice(BigDecimal unitPrice) {
         this.unitPrice = unitPrice;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "code=" + code +
+                ", name='" + name + '\'' +
+                ", quantity=" + quantity +
+                ", unitPrice=" + unitPrice +
+                '}';
     }
 }

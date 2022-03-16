@@ -1,12 +1,11 @@
-package supermarket;
+package supermarket.models;
 
 public class Client {
     private int id;
     private String firstName;
     private String lastName;
 
-    public Client(int id, String firstName, String lastName) {
-        this.id = id;
+    public Client(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
