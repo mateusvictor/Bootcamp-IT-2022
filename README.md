@@ -26,3 +26,7 @@ Exercícios do Bootcamp IT 2022 - Mercado Livre
 ### 6. POO - IV Exercícios
 - Código fonte: https://github.com/mateusvictor/Bootcamp-IT-2022/blob/main/Java-III/src/pratica2/Main.java
 - Conceitos: funções lambda e streams.
+
+### 7. Supermercado "O Econômico"
+- Código fonte: https://github.com/mateusvictor/Bootcamp-IT-2022/tree/main/Java-IV/src/supermarket
+- Conceitos: Java e Programação Orientada a Objetos.
