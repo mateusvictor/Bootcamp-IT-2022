@@ -40,5 +40,5 @@ Exercícios do Bootcamp IT 2022 - Mercado Livre
 - Conceitos: criação de APIs com Spring Boot e desenvolvimento de um algoritmo que realiza a tradução de um texto comum para código morse e vice-versa.
 
 ### 10. (API) Idade de uma Pessoa
-- Código fonte: https://github.com/mateusvictor/Bootcamp-IT-2022/tree/main/Spring-I/person-age/src/main/java/br/com/meli/personage
+- Código fonte: https://github.com/mateusvictor/Bootcamp-IT-2022/tree/main/Spring-II/person-age/src/main/java/br/com/meli/personage
 - Conceitos: uso da annotation ```@PathVariable``` no controller principal.
