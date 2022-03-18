@@ -7,9 +7,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class MainController {
-    @PostMapping("/morse-code/")
+    @PostMapping("/to-morse-code/")
     @ResponseBody
     public String convertToMorseCode(@RequestBody String text){
         return MorseCode.toMorseCode(text);
+    }
+
+    @PostMapping("/to-alpha-num/")
+    @ResponseBody
+    public String convertToAlphaNum(@RequestBody String text){
+        return MorseCode.toAlphaNum(text);
     }
 }
