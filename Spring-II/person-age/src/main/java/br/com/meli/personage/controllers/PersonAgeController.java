@@ -3,11 +3,9 @@ package br.com.meli.personage.controllers;
 import br.com.meli.personage.services.PersonAgeService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@ResponseBody
 public class PersonAgeController {
     private final PersonAgeService service = PersonAgeService.getInstance();
 
