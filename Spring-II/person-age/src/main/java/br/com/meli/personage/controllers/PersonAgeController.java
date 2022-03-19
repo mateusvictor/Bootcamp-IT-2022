@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @ResponseBody
 public class PersonAgeController {
-    private PersonAgeService service;
+    private final PersonAgeService service = PersonAgeService.getInstance();
 
     @GetMapping("/{day}/{month}/{year}")
     public String getAge(@PathVariable Integer day,
                          @PathVariable Integer month,
-                         @PathVariable Integer year){
+                         @PathVariable Integer year) {
         return service.calculateAge(day, month, year);
     }
 

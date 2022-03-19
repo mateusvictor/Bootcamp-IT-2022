@@ -1,13 +1,20 @@
 package br.com.meli.personage.services;
 
+import lombok.AllArgsConstructor;
+
 import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.time.Period;
 
+@AllArgsConstructor
 public class PersonAgeService {
-    public static String calculateAge(Integer day, Integer month, Integer year){
+    private static PersonAgeService personAgeService = new PersonAgeService();
+    public static PersonAgeService getInstance() {
+        return personAgeService;
+    }
+    public static String calculateAge(Integer day, Integer month, Integer year) {
         LocalDate birthDate;
-        try{
+        try {
             birthDate = LocalDate.of(year, month, day);
         } catch (DateTimeException e) {
             return "Data inválida!";
