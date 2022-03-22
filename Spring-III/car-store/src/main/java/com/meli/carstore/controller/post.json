@@ -1,0 +1,35 @@
+{
+  "brand": "Ford",
+  "model": "Fiesta",
+  "manufacturingDate": "2004-11-11",
+  "numberOfKilometers": "116000",
+  "doors": "4",
+  "price": "71000",
+  "currency": "AR",
+  "services": [
+    {
+      "date": "2007-09-30",
+      "kilometers": "40000",
+      "descriptions": "Change air filters"
+    }
+  ],
+  "countOfOwners": "2"
+}
+
+{
+  "brand": "Chevrolet",
+  "model": "Corsa",
+  "manufacturingDate": "2000-11-20",
+  "numberOfKilometers": "115000",
+  "doors": "5",
+  "price": "90000",
+  "currency": "AR",
+  "services": [
+    {
+      "date": "2003-05-21",
+      "kilometers": "60000",
+      "descriptions": "Change air filters"
+    }
+  ],
+  "countOfOwners": "2"
+}
