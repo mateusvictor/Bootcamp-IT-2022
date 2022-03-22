@@ -47,3 +47,8 @@ Exercícios do Bootcamp IT 2022 - Mercado Livre
 ### 11. (API) DTOs e ResponseEntity
 - Código fonte: https://github.com/mateusvictor/Bootcamp-IT-2022/tree/main/Spring-II/using-dtos/src/main/java/br/com/meli/usingdtos
 - Conceitos: utilização de DTOs na exposição de uma entidade e utilização da classe ```ResponseEntity```.
+
+### 12. (API) Star Wars
+- API que permite a consulta de personagens do Star Wars.
+- Código fonte: https://github.com/mateusvictor/Bootcamp-IT-2022/tree/main/Spring-III/starwars
+- Conceitos: arquitetura multicamada (model, repository, service, DTO e controller) e manuseio de arquivos JSON.
