@@ -1,4 +1,4 @@
-package supermarket.models;
+package supermarket.repositories;
 
 import java.util.List;
 

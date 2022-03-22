@@ -1,4 +1,6 @@
-package supermarket.models;
+package supermarket.repositories;
+
+import supermarket.models.Client;
 
 import java.util.ArrayList;
 import java.util.HashMap;

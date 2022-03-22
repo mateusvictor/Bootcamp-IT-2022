@@ -1,5 +1,8 @@
 package supermarket.views;
 
+import supermarket.repositories.BillManager;
+import supermarket.repositories.ClientManager;
+import supermarket.repositories.ProductManager;
 import supermarket.utils.Util;
 import supermarket.models.*;
 

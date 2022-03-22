@@ -2,7 +2,7 @@ package supermarket.views;
 
 import supermarket.utils.Util;
 import supermarket.models.Product;
-import supermarket.models.ProductManager;
+import supermarket.repositories.ProductManager;
 
 import java.math.BigDecimal;
 

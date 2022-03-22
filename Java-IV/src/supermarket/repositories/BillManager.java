@@ -1,10 +1,12 @@
-package supermarket.models;
+package supermarket.repositories;
+
+import supermarket.models.Bill;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class BillManager implements CRUD<Bill>{
+public class BillManager implements CRUD<Bill> {
     private static BillManager productManager = new BillManager();
     private HashMap<Integer, Bill> products = new HashMap<Integer, Bill>();
     private Integer lastId = 0;

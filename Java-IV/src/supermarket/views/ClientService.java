@@ -2,7 +2,7 @@ package supermarket.views;
 
 import supermarket.utils.Util;
 import supermarket.models.Client;
-import supermarket.models.ClientManager;
+import supermarket.repositories.ClientManager;
 
 
 public class ClientService extends Util {

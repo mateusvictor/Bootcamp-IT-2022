@@ -1,10 +1,12 @@
-package supermarket.models;
+package supermarket.repositories;
+
+import supermarket.models.Product;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class ProductManager implements CRUD<Product>{
+public class ProductManager implements CRUD<Product> {
     private static ProductManager productManager = new ProductManager();
     private HashMap<Integer, Product> products = new HashMap<Integer, Product>();
     private Integer lastId = 0;
