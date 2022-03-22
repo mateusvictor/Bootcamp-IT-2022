@@ -54,10 +54,10 @@ public class VehicleController {
     }
 
     @GetMapping("/prices")
-    public ResponseEntity<List<VehicleDTO>> getVehicleByPrice(@RequestParam(name = "since") String since,
-                                                             @RequestParam(name = "to") String to){
+    public ResponseEntity<List<VehicleDTO>> getVehicleByPrice(@RequestParam(name = "since") Integer since,
+                                                             @RequestParam(name = "to") Integer to){
         return ResponseEntity.ok(
                 VehicleDTO.convert(
-                        vehicleService.findVehicleByPrice(Integer.parseInt(since), Integer.parseInt(to))));
+                        vehicleService.findVehicleByPrice(since, to)));
     }
 }
