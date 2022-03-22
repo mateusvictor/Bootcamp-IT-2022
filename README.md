@@ -52,3 +52,7 @@ Exercícios do Bootcamp IT 2022 - Mercado Livre
 - API que permite a consulta de personagens do Star Wars.
 - Código fonte: https://github.com/mateusvictor/Bootcamp-IT-2022/tree/main/Spring-III/starwars
 - Conceitos: arquitetura multicamada (model, repository, service, DTO e controller) e manuseio de arquivos JSON.
+
+### 13. (API) Concessionária de veículos
+- Código fonte: https://github.com/mateusvictor/Bootcamp-IT-2022/tree/main/Spring-III/car-store
+- Conceitos: revisão dos conceitos de Spring e arquitetura multicamadas.
