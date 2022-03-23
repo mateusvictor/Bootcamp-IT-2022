@@ -56,3 +56,9 @@ Exercícios do Bootcamp IT 2022 - Mercado Livre
 ### 13. (API) Concessionária de veículos
 - Código fonte: https://github.com/mateusvictor/Bootcamp-IT-2022/tree/main/Spring-III/car-store
 - Conceitos: revisão dos conceitos de Spring e arquitetura multicamadas.
+
+
+## Desafios
+
+### Desafio Spring I
+- 
