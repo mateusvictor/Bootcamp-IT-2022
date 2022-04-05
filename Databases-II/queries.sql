@@ -24,7 +24,7 @@ SELECT genres.name AS genre, COUNT(*) as number_of_movies FROM genres
     HAVING number_of_movies >= 3;
     
 -- 5. Mostrar apenas o nome e sobrenome dos atores que atuam em todos os filmes de Star Wars e que estes não se repitam.-- 
-SELECT DISTINCT actors.first_name,actors.last_name FROM actors
+SELECT DISTINCT actors.first_name, actors.last_name FROM actors
 	INNER JOIN actor_movie
     ON actors.id = actor_movie.actor_id
     INNER JOIN movies
