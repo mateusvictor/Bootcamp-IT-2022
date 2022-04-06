@@ -1,4 +1,4 @@
-USE biblioteca;
+USE pratica3_db;
 -- 1. Listar os dados dos autores.
 SELECT * FROM autores;
 
@@ -21,7 +21,7 @@ SELECT * FROM livros WHERE editora = 'Salamandra';
 
 -- 7. Listar os dados dos alunos cuja idade é maior que a média.
 SELECT nome, idade FROM alunos
-	WHERE idade > (SELECT AVG(idade) FROM alunos GROUP BY idade);
+	WHERE idade > (SELECT AVG(idade) FROM alunos GROUP BY idade LIMIT 1);
 
 -- 8. Listar os nomes dos alunos cujo sobrenome começa com a letra G.
 SELECT nome FROM alunos WHERE sobrenome LIKE 'G%';
@@ -38,7 +38,7 @@ SELECT * FROM autores WHERE nacionalidade = 'italiana' OR nacionalidade = 'argen
 -- 11. Que livros foram emprestados ao leitor “Filippo Galli”?
 SELECT livros.titulo FROM livros
 	INNER JOIN emprestimos ON livros.id = emprestimos.livro_id
-    INNER JOIN alunos ON emprestimos.leitor_id = alunos.id
+    INNER JOIN alunos ON emprestimos.aluno_id = alunos.id
     WHERE alunos.nome = 'Filippo' AND alunos.sobrenome = 'Galli';
 
 -- 12. Listar o nome do aluno mais novo.
@@ -46,9 +46,9 @@ SELECT nome FROM alunos ORDER BY idade LIMIT 1;
 
 -- 13. Listar os nomes dos alunos a quem os livros de Banco de Dados foram emprestados.
 SELECT nome FROM alunos 
-	INNER JOIN emprestimos ON alunos.id = emprestimos.leitor_id
+	INNER JOIN emprestimos ON alunos.id = emprestimos.aluno_id
     INNER JOIN livros ON emprestimos.livro_id = livros.id
-    WHERE area = 'Bando de Dados';
+    WHERE area = 'Banco de Dados';
 
 -- 14. Listar os livros que pertencem ao autor J.K. Rowling.
 SELECT titulo FROM livros 
