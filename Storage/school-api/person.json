@@ -1,0 +1,15 @@
+[
+  {
+    "firstName": "Jorge Vieira",
+    "lastName": "Silva Amoedo",
+    "birthDate": "2000-07-05",
+    "email": "jorgin@gmail.com",
+    "address": {
+      "country": "Brazil",
+      "state": "Sao Paulo",
+      "street": "Rua do Paulo",
+      "number": 12,
+      "postalCode": "03123-901"
+    }
+  }
+]
