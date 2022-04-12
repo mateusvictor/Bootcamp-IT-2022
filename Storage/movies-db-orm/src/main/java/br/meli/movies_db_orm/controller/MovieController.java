@@ -73,7 +73,7 @@ public class MovieController {
         List<Actor> actorList = new ArrayList<>();
 
         Genre genre = genreService.findById(movieDTO.getGenreId());
-        
+
         for (Long id : movieDTO.getActorsIds())
             actorList.add(actorService.findById(id));
 

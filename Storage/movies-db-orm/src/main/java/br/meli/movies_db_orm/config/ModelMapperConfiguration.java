@@ -1,4 +1,4 @@
-package br.meli.movies_db_orm.dto.mapper;
+package br.meli.movies_db_orm.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
