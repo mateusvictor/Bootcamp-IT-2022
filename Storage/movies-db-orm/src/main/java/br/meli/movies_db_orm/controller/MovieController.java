@@ -9,6 +9,8 @@ import br.meli.movies_db_orm.model.Genre;
 import br.meli.movies_db_orm.model.Movie;
 import br.meli.movies_db_orm.repository.ActorRepository;
 import br.meli.movies_db_orm.repository.GenreRepository;
+import br.meli.movies_db_orm.service.ActorService;
+import br.meli.movies_db_orm.service.GenreService;
 import br.meli.movies_db_orm.service.MovieService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,8 +28,8 @@ import java.util.List;
 @RequestMapping(value = "/movies")
 public class MovieController {
     private final MovieService movieService;
-    private final ActorRepository actorRepository;
-    private final GenreRepository genreRepository;
+    private final ActorService actorService;
+    private final GenreService genreService;
     private final MovieAssembler mapper;
 
     @GetMapping()
@@ -70,12 +72,10 @@ public class MovieController {
         Movie movie = mapper.toDomainObject(movieDTO);
         List<Actor> actorList = new ArrayList<>();
 
-        Genre genre = genreRepository.findById(movieDTO.getGenreId()).orElseThrow(
-                () -> new EntityNotFoundException("Invalid genre ID: " + movieDTO.getGenreId()));
-
+        Genre genre = genreService.findById(movieDTO.getGenreId());
+        
         for (Long id : movieDTO.getActorsIds())
-            actorList.add(actorRepository.findById(id).orElseThrow(
-                    () -> new EntityNotFoundException("Invalid actor ID: " + id)));
+            actorList.add(actorService.findById(id));
 
         movie.setActors(actorList);
         movie.setGenre(genre);
