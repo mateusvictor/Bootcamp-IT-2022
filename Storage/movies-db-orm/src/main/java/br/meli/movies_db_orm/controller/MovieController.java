@@ -68,6 +68,16 @@ public class MovieController {
         return ResponseEntity.ok(movieResponseDTO);
     }
 
+//    @GetMapping("/actorsRating/{rating}")
+//    public ResponseEntity<List<MovieResponseDTO>> getMoviesByActorsRating(@PathVariable Double rating){
+//        return ResponseEntity.ok(mapper.toResponseObject(movieService.findActorsByMinRating(rating)));
+//    }
+
+    @GetMapping("/genreId/{genreId}")
+    public ResponseEntity<List<MovieResponseDTO>> getMoviesByGenreId(@PathVariable Long genreId){
+        return ResponseEntity.ok(mapper.toResponseObject(movieService.findActorsByGenreId(genreId)));
+    }
+
     private Movie requestDTOToMovie(MovieRequestDTO movieDTO) {
         Movie movie = mapper.toDomainObject(movieDTO);
         List<Actor> actorList = new ArrayList<>();

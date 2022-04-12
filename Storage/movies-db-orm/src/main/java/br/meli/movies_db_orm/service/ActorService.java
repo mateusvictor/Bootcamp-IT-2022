@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.function.DoubleBinaryOperator;
 
 @Service
 public class ActorService implements IService<Actor, Long>{
@@ -21,7 +22,7 @@ public class ActorService implements IService<Actor, Long>{
     @Override
     public Actor findById(Long id) {
         return actorRepository.findById(id).orElseThrow(
-                () -> new EntityNotFoundException("Invalid autor ID: " + id));
+                () -> new EntityNotFoundException("Invalid actor ID: " + id));
     }
 
     @Override
@@ -45,5 +46,17 @@ public class ActorService implements IService<Actor, Long>{
     @Override
     public void deleteById(Long id) {
         actorRepository.deleteById(id);
+    }
+
+    public List<Actor> findActorsWithFavoriteMovie(){
+        return actorRepository.findActorsWithFavoriteMovie();
+    }
+
+    public List<Actor> findActorsByMinRating(Double minRating){
+        return actorRepository.findActorByMinRating(minRating);
+    }
+
+    public List<Actor> findActorsByMovieId(Long movieId){
+        return actorRepository.findActorByMovieId(movieId);
     }
 }

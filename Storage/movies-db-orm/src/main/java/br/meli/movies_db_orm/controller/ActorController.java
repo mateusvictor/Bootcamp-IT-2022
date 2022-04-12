@@ -55,4 +55,20 @@ public class ActorController {
         actorService.deleteById(id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/withFavoriteMovie")
+    public ResponseEntity<List<ActorResponseDTO>> getActorsWithFavoriteMovie(){
+        return ResponseEntity.ok(mapper.toResponseObject(actorService.findActorsWithFavoriteMovie()));
+    }
+
+    @GetMapping("/rating/{minRating}")
+    public ResponseEntity<List<ActorResponseDTO>> getActorsByMinRating(@PathVariable Double minRating){
+        return ResponseEntity.ok(mapper.toResponseObject(actorService.findActorsByMinRating(minRating)));
+    }
+
+    @GetMapping("/movie/{movieId}")
+    public ResponseEntity<List<ActorResponseDTO>> getActorsByMovieId(@PathVariable Long movieId){
+        return ResponseEntity.ok(mapper.toResponseObject(actorService.findActorsByMovieId(movieId)));
+    }
+
 }

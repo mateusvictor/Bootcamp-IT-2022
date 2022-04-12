@@ -56,4 +56,14 @@ public class MovieService implements IService<Movie, Long> {
     public void deleteById(Long id) {
         movieRepository.deleteById(id);
     }
+
+//    public List<Movie> findActorsByMinRating(Double minRating){
+//        List<Long> haha = movieRepository.findMoviesByActorsRating(minRating);
+//        System.out.println(haha.toString());
+//        return null;
+//    }
+
+    public List<Movie> findActorsByGenreId(Long genreId) {
+        return movieRepository.findMoviesByGenreId(genreId);
+    }
 }
