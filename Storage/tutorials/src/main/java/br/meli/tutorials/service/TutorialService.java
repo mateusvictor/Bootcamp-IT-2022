@@ -25,11 +25,16 @@ public class TutorialService {
         return repository.findById(id).orElse(new Tutorial());
     }
 
+//    @Transactional(readOnly = true)
+//    public List<Tutorial> findAllPublished(){
+//        return this.findAll().stream()
+//                .filter(Tutorial::getPublished)
+//                .collect(Collectors.toList());
+//    }
+
     @Transactional(readOnly = true)
-    public List<Tutorial> findAllPublished(){
-        return this.findAll().stream()
-                .filter(Tutorial::getPublished)
-                .collect(Collectors.toList());
+    public List<Tutorial> findByPublished(Boolean published){
+        return repository.findByPublished(published);
     }
 
     @Transactional(readOnly = true)

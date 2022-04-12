@@ -23,7 +23,7 @@ public class TutorialController {
 
     @GetMapping("/published")
     public ResponseEntity<List<Tutorial>> getPublishedTutorials(){
-        return ResponseEntity.ok(service.findAllPublished());
+        return ResponseEntity.ok(service.findByPublished(true));
     }
 
     @GetMapping("/{id}")
